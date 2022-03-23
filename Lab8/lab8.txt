@@ -1,0 +1,74 @@
+Results:
+Run 1:
+Query time without indexes
+Query1: 21.749 ms
+Query2: 36.927 ms
+Query3: 113.258 ms
+Query4: 104.752 ms
+Query5: 173.531 ms
+Query6: 30.177 ms
+Query time with indexes
+Query1: 11.030 ms
+Query2: 25.327 ms
+Query3: 45.319 ms
+Query4: 86.551 ms
+Query5: 856.219 ms
+Query6: 23.456 ms
+
+Run 2:
+Query time without indexes
+Query1: 21.134 ms
+Query2: 34.984 ms
+Query3: 114.530 ms
+Query4: 103.868 ms
+Query5: 121.017 ms
+Query6: 27.859 ms
+Query time with indexes
+Query1: 8.108 ms
+Query2: 18.785 ms
+Query3: 37.203 ms
+Query4: 74.541 ms
+Query5: 760.658 ms
+Query6: 16.453 ms
+
+Run 3:
+Query time without indexes
+Query1: 21.277 ms
+Query2: 36.701 ms
+Query3: 120.766 ms
+Query4: 103.420 ms
+Query5: 114.324 ms
+Query6: 18.573 ms
+Query time with indexes
+Query1: 6.057 ms
+Query2: 14.361 ms
+Query3: 29.956 ms
+Query4: 63.070 ms
+Query5: 626.348 ms
+Query6: 7.472 ms
+
+Average results:
+Query time without indexes
+Query1: 21.3867 ms
+Query2: 36.204 ms
+Query3: 116.1847 ms
+Query4: 104.013 ms
+Query5: 136.2907 ms
+Query6: 25.5363 ms
+Query time with indexes
+Query1: 8.3983 ms
+Query2: 19.491 ms
+Query3: 37.4927 ms
+Query4: 74.7207 ms
+Query5: 747.7417 ms
+Query6: 15.7937 ms
+
+Average Difference From Regular Run to Index Use:
+Query1: With Indexes = 12.9884 ms saved
+Query2: With Indexes = 16.713 ms saved
+Query3: With Indexes = 78.692 ms saved
+Query4: With Indexes = 29.2923 ms saved
+Query5: With Indexes = 611.451 ms wasted
+Query6: With Indexes = 9.7426 ms saved
+
+For most queries used here, indexes increase run speed, except in the case of Query 5 (update all on hand values) in that case, Indexes greatly increased run time due to the storage component of each index that was saved. (I created an index for every value I found used)
